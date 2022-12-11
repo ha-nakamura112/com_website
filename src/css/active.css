@@ -1,0 +1,13 @@
+.isClosed{
+  width: 60px !important;
+}
+.isClosed > button{
+  margin: 0;
+}
+.isClosed > div{
+  width: 45px;
+}
+.isClosed > article{
+  justify-content: center;
+  padding-left: 0rem;
+}

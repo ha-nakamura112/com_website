@@ -1,0 +1,11 @@
+.footer{
+  position: absolute;
+  background-color: transparent;
+  bottom: 1.5rem;
+  height: min-content;
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
