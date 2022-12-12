@@ -8,6 +8,13 @@
   width: 45px;
 }
 .isClosed > article{
-  justify-content: center;
-  padding-left: 0rem;
+  width: 100% !important;
+  padding-left: 0rem !important;
+  align-items: center !important;
+}
+.isActive{
+  height: min-content !important;
+}
+.isClosed .isActive{
+  height: 0px !important;
 }
