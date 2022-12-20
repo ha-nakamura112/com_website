@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { HiArrowNarrowLeft, HiMenu, HiUserCircle, HiShoppingCart, HiUserGroup, HiOfficeBuilding } from "react-icons/hi";
+import { HiArrowNarrowLeft, HiMenu, HiUserCircle, HiShoppingCart, HiUserGroup, HiOfficeBuilding, HiDatabase } from "react-icons/hi";
 import styles from "../css/SideBar.module.css";
 import "../css/active.css";
 import Footer from "./Footer";
 import $ from "jquery";
 
-const SideBar = ()=>{
+const SideBar = () => {
   const [isOpened, setIsOpened] = useState(false);
 
   const openList = (e) => {
@@ -46,6 +46,12 @@ const SideBar = ()=>{
         <li><Link to="/login">Weather</Link></li>
         <li><Link to="/login">Trip</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
+      </ul>
+    </article>
+    <article>
+      {isOpened ? <div onClick={(e)=>openList(e)}><HiDatabase/>Admin</div> : <HiDatabase/>}
+      <ul>
+        <li><Link to="/admin">User Management</Link></li>
       </ul>
     </article>
     {isOpened && <Footer/>}

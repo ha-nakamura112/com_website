@@ -1,11 +1,18 @@
 import dbService from "../services/dbService";
+import {useState,useEffect} from "react";
 
 export default function Login(){
+    const[data,setRes] = useState([]);
+    
     const loginSubmit = (event)=>{
         event.preventDefault();
         let loginFormData = new FormData(event.target);
         dbService.loginUser(loginFormData)
-        .then(res=>{console.log(res.data)})
+        .then(res=>{
+            setRes(res.data);
+            sessionStorage.setItem("sid",res.data[0].email);
+            console.log(res.data[0].email);
+        })
         .catch(err=>{console.log(err)});
     }
     return(
