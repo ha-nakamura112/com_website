@@ -17,6 +17,7 @@ export default function Nav(){
                             <li><Link to="community">Community</Link></li>
                             <li><Link to="contact">Contact Us</Link></li>
                             <li><Link to="login">My page</Link></li>
+                            <li><Link to="admin">Admin</Link></li>
                         </ul>
                     </nav>
                 </header>
