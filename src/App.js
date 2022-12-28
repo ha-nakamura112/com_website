@@ -8,6 +8,7 @@ import Register from './pages/Register';
 import Contact from './pages/Contact';
 import Nopage from './pages/Nopage';
 import Admin from './pages/Amin';
+import Admin2 from './pages/Admin2';
 import { useState,useEffect } from 'react';
 
 export default function App(){
@@ -40,6 +41,7 @@ export default function App(){
                         <Route path='logout' element={<Logout LoggedUser={user}/>} />
                         <Route path='register' element={<Register/>} />
                         <Route path='contact' element={<Contact/>} />
+                        <Route path='admindash' element={<Admin2/>} />
                         <Route path='admin' element={<Admin/>} />
                         <Route path='*' element={<Nopage/>} />
                     </Route>

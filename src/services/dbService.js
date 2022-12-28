@@ -9,39 +9,39 @@ class dbService{
     }
 
     getData(){
+        return httpCommon.post('/userdata');
+    }
+
+    change(test,test2){
         let formdata = new FormData();
-        return httpCommon.post('/userdata', formdata, {
-            headers:{
-                'content-type':'multipart/form-data'
-            }
-        });
+        formdata.append("id",test);
+        formdata.append("table",test2);
+        return httpCommon.post('/change',formdata);
     }
 
     getPosts(){
         let formdata = new FormData();
-        return httpCommon.post('/postdata', formdata, {
-            headers:{
-                'content-type':'multipart/form-data'
-            }
-        });
+        formdata.append("table","community_tb");
+        return httpCommon.post('/postdata',formdata);
     }
 
     getPosts2(){
         let formdata = new FormData();
-        return httpCommon.post('/postdata2', formdata, {
-            headers:{
-                'content-type':'multipart/form-data'
-            }
-        });
+        formdata.append("table","market_td");
+        return httpCommon.post('/postdata',formdata);
     }
 
     getPosts3(){
         let formdata = new FormData();
-        return httpCommon.post('/postdata3', formdata, {
-            headers:{
-                'content-type':'multipart/form-data'
-            }
-        });
+        formdata.append("table","job_tb");
+        return httpCommon.post('/postdata',formdata);
+    }
+
+    block(key,action){
+        let formdata = new FormData();
+        formdata.append("key",key);
+        formdata.append("request",action);
+        return httpCommon.post('/block',formdata);
     }
     
 }

@@ -51,7 +51,8 @@ const SideBar = () => {
     <article>
       {isOpened ? <div onClick={(e)=>openList(e)}><HiDatabase/>Admin</div> : <HiDatabase/>}
       <ul>
-        <li><Link to="/admin">User Management</Link></li>
+        <li><Link to="/admindash">Dashboard</Link></li>
+        <li><Link to="/admin">Management</Link></li>
       </ul>
     </article>
     {isOpened && <Footer/>}
