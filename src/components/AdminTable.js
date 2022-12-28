@@ -212,110 +212,113 @@ export default function AdminTable(){
                     </ul>
             </div>
             
-            <div className={styles.post}>
-                <button className={styles.all} onClick={()=>AdminDash()}>See all Posts</button>
-            </div>
-            <div className={styles.container}>
-                    <h3>Community Posts</h3>
-                    <ul className={styles.responsive_table}>
-                        <li className={styles.table_header}>
-                            <div className={styles.col_1}>Post ID</div>
-                            <div className={styles.col_2}>Title</div>
-                            <div className={styles.col_3}>Writer</div>
-                            <div className={styles.col_4}>Email</div>
-                            <div className={styles.col_5}>Post Time</div>
-                            <div className={styles.col_6}>category</div>
-                            <div className={styles.col_7}>View</div>
-                            <div className={styles.col_8}>Control</div>
-                        </li>
-                    {
-                    CommunityData.map((item, idx) => {
-                        return (
-                            <PostTable
-                            key={idx}
-                            data={item.no_data}
-                            postset="commu"
-                            post_id = {item.post_id}
-                            title = {item.title}
-                            user_id = {item.user_id}
-                            user_name = {item.firstname + " " +item.lastname}
-                            email = {item.email}
-                            post_time = {item.post_time}
-                            category = {item.category}
-                            view = {item.view}
-                            status = {item.status}
-                            />
-                        )
-                    })
-                    }
-                    </ul>
-            </div>
-            <div className={styles.container}>
-                    <h3>Market Posts</h3>
-                    <ul className={styles.responsive_table}>
-                        <li className={styles.table_header}>
-                            <div className={styles.col_1}>Post ID</div>
-                            <div className={styles.col_2}>Title</div>
-                            <div className={styles.col_3}>Writer</div>
-                            <div className={styles.col_4}>Email</div>
-                            <div className={styles.col_5}>Post Time</div>
-                            <div className={styles.col_7}>View</div>
-                            <div className={styles.col_8}>Control</div>
-                        </li>
-                    {
-                    data3.map((item, idx) => {
-                        return (
-                            <PostTable
-                            key={idx}
-                            data={item.no_data}
-                            postset = "ee"
-                            post_id = {item.post_id}
-                            title = {item.title}
-                            user_id = {item.user_id}
-                            user_name = {item.firstname + " " +item.lastname}
-                            email = {item.email}
-                            post_time = {item.post_time}
-                            category = {item.category}
-                            view = {item.view}
-                            status = {item.status}
-                            />
-                        )
-                    })
-                    }
-                    </ul>
-            </div>
-            <div className={styles.container}>
-                    <h3>Job Posts</h3>
-                    <ul className={styles.responsive_table}>
-                        <li className={styles.table_header}>
-                            <div className={styles.col_1}>Post ID</div>
-                            <div className={styles.col_2}>Title</div>
-                            <div className={styles.col_3}>Writer</div>
-                            <div className={styles.col_4}>Email</div>
-                            <div className={styles.col_5}>Post Time</div>
-                            <div className={styles.col_7}>View</div>
-                            <div className={styles.col_8}>Control</div>
-                        </li>
-                    {
-                    data4.map((item, idx) => {
-                        return (
-                            <PostTable
-                            key={idx}
-                            data={item.no_data}
-                            post_id = {item.post_id}
-                            title = {item.title}
-                            user_id = {item.user_id}
-                            user_name = {item.firstname + " " +item.lastname}
-                            email = {item.email}
-                            post_time = {item.post_time}
-                            category = {item.category}
-                            view = {item.view}
-                            status = {item.status}
-                            />
-                        )
-                    })
-                    }
-                    </ul>
+
+            <div className={styles.postcontainer}>
+                <div className={styles.post}>
+                    <button className={styles.all} onClick={()=>AdminDash()}>See all Posts</button>
+                </div>
+                <div className={styles.container}>
+                        <h3>Community Posts</h3>
+                        <ul className={styles.responsive_table}>
+                            <li className={styles.table_header}>
+                                <div className={styles.col_1}>Post ID</div>
+                                <div className={styles.col_2}>Title</div>
+                                <div className={styles.col_3}>Writer</div>
+                                <div className={styles.col_4}>Email</div>
+                                <div className={styles.col_5}>Post Time</div>
+                                <div className={styles.col_6}>category</div>
+                                <div className={styles.col_7}>View</div>
+                                <div className={styles.col_8}>Control</div>
+                            </li>
+                        {
+                        CommunityData.map((item, idx) => {
+                            return (
+                                <PostTable
+                                key={idx}
+                                data={item.no_data}
+                                postset="commu"
+                                post_id = {item.post_id}
+                                title = {item.title}
+                                user_id = {item.user_id}
+                                user_name = {item.firstname + " " +item.lastname}
+                                email = {item.email}
+                                post_time = {item.post_time}
+                                category = {item.category}
+                                view = {item.view}
+                                status = {item.status}
+                                />
+                            )
+                        })
+                        }
+                        </ul>
+                </div>
+                <div className={styles.container}>
+                        <h3>Market Posts</h3>
+                        <ul className={styles.responsive_table}>
+                            <li className={styles.table_header}>
+                                <div className={styles.col_1}>Post ID</div>
+                                <div className={styles.col_2}>Title</div>
+                                <div className={styles.col_3}>Writer</div>
+                                <div className={styles.col_4}>Email</div>
+                                <div className={styles.col_5}>Post Time</div>
+                                <div className={styles.col_7}>View</div>
+                                <div className={styles.col_8}>Control</div>
+                            </li>
+                        {
+                        data3.map((item, idx) => {
+                            return (
+                                <PostTable
+                                key={idx}
+                                data={item.no_data}
+                                postset = "ee"
+                                post_id = {item.post_id}
+                                title = {item.title}
+                                user_id = {item.user_id}
+                                user_name = {item.firstname + " " +item.lastname}
+                                email = {item.email}
+                                post_time = {item.post_time}
+                                category = {item.category}
+                                view = {item.view}
+                                status = {item.status}
+                                />
+                            )
+                        })
+                        }
+                        </ul>
+                </div>
+                <div className={styles.container}>
+                        <h3>Job Posts</h3>
+                        <ul className={styles.responsive_table}>
+                            <li className={styles.table_header}>
+                                <div className={styles.col_1}>Post ID</div>
+                                <div className={styles.col_2}>Title</div>
+                                <div className={styles.col_3}>Writer</div>
+                                <div className={styles.col_4}>Email</div>
+                                <div className={styles.col_5}>Post Time</div>
+                                <div className={styles.col_7}>View</div>
+                                <div className={styles.col_8}>Control</div>
+                            </li>
+                        {
+                        data4.map((item, idx) => {
+                            return (
+                                <PostTable
+                                key={idx}
+                                data={item.no_data}
+                                post_id = {item.post_id}
+                                title = {item.title}
+                                user_id = {item.user_id}
+                                user_name = {item.firstname + " " +item.lastname}
+                                email = {item.email}
+                                post_time = {item.post_time}
+                                category = {item.category}
+                                view = {item.view}
+                                status = {item.status}
+                                />
+                            )
+                        })
+                        }
+                        </ul>
+                </div>
             </div>
         </>
     )
